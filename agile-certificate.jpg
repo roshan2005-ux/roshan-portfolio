@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="250" viewBox="0 0 300 250">
+  <rect fill="#8b5cf6" width="300" height="250"/>
+  <text fill="#ffffff" font-family="Arial" font-size="18" x="50%" y="40%" text-anchor="middle">Agile & Scrum</text>
+  <text fill="#ffffff" font-family="Arial" font-size="14" x="50%" y="55%" text-anchor="middle">Certificate</text>
+  <circle fill="#ffffff" cx="150" cy="75" r="20"/>
+</svg>

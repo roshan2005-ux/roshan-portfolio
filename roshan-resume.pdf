@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Template - Roshan Ebinesar</title>
+    <style>
+        body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+        h1 { color: #2563eb; }
+        h2 { border-bottom: 2px solid #2563eb; padding-bottom: 10px; }
+        .contact-info { margin-bottom: 20px; }
+        .section { margin-bottom: 30px; }
+    </style>
+</head>
+<body>
+    <h1>Roshan Ebinesar</h1>
+    <p><strong>Project Manager</strong></p>
+    <div class="contact-info">
+        <p>Email: roshanebi005@gmail.com</p>
+        <p>Phone: +91 7418197957</p>
+        <p>LinkedIn: linkedin.com/in/roshan-roshan-235321338</p>
+    </div>
+
+    <div class="section">
+        <h2>Professional Summary</h2>
+        <p>Organized and detail-oriented Project Manager with experience in planning, coordinating, and delivering academic projects on time. Skilled in task allocation, team coordination, and progress tracking using tools.</p>
+    </div>
+
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+            <li>Project Planning & Scheduling</li>
+            <li>Team Coordination & Management</li>
+            <li>Progress Tracking & Reporting</li>
+            <li>Task Allocation</li>
+            <li>Stakeholder Communication</li>
+            <li>MS Office, Trello, Jira, Asana</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>Projects</h2>
+        <h3>Student Management System - Project Manager</h3>
+        <p>Tools: MS Office, Trello, Excel</p>
+        
+        <h3>Task Management App - Project Manager</h3>
+        <p>Tools: Jira, Asana, Slack</p>
+        
+        <h3>Food Delivery App - Project Manager</h3>
+        <p>Tools: Trello, GitHub, Figma</p>
+    </div>
+
+    <div class="section">
+        <h2>Languages</h2>
+        <p>English, Tamil</p>
+    </div>
+
+    <p style="margin-top: 40px; color: #666; font-size: 12px;">
+        NOTE: This is a placeholder template. Please replace with your actual PDF resume at: assets/resume/roshan-resume.pdf
+    </p>
+</body>
+</html>

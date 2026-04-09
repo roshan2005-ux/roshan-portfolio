@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <rect fill="#2563eb" width="400" height="300"/>
+  <text fill="#ffffff" font-family="Arial" font-size="24" x="50%" y="45%" text-anchor="middle">Student Management</text>
+  <text fill="#ffffff" font-family="Arial" font-size="16" x="50%" y="55%" text-anchor="middle">System Project</text>
+</svg>
