@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Roshan Ebinesar | Full-Stack Developer</title>
+  <meta name="description" content="Roshan Ebinesar — Computer Science Engineering student and full-stack developer building modern, responsive web applications, with a growing interest in cybersecurity.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Roshan Ebinesar | Full-Stack Developer">
+  <meta property="og:description" content="Portfolio of Roshan Ebinesar — CSE student, full-stack developer, and cybersecurity enthusiast.">
+   <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="assets/profile/favicon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ NAVBAR ============ -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__inner">
+      <a href="#home" class="navbar__logo">ROSHAN<span>.</span>EBINESAR</a>
+
+      <nav class="navbar__nav" id="navMenu">
+        <a href="#home" class="nav-link active" data-nav>Home</a>
+        <a href="#about" class="nav-link" data-nav>About</a>
+        <a href="#skills" class="nav-link" data-nav>Skills</a>
+        <a href="#projects" class="nav-link" data-nav>Projects</a>
+        <a href="#journey" class="nav-link" data-nav>Journey</a>
+        <a href="#education" class="nav-link" data-nav>Education</a>
+        <a href="#certifications" class="nav-link" data-nav>Certifications</a>
+        <a href="#contact" class="nav-link nav-link--cta" data-nav>Contact</a>
+      </nav>
+
+      <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="hero__bg" aria-hidden="true"></div>
+      <div class="hero__inner">
+
+        <div class="hero__content reveal">
+          <div class="hero__profile">
+            <img src="assets/profile/roshan.jpeg" alt="Roshan Ebinesar" class="hero__avatar">
+          </div>
+          <p class="hero__eyebrow">Hi, I'm</p>
+          <h1 class="hero__name">Roshan Ebinesar</h1>
+          <h2 class="hero__role">Full&#8209;Stack Developer</h2>
+          <p class="hero__desc">
+            Computer Science Engineering student focused on building modern, responsive
+            and user-focused web applications while continuously improving my
+            full-stack development skills.
+          </p>
+
+          <div class="hero__actions">
+            <a href="#projects" class="btn btn--primary">View My Work</a>
+            <a href="assets/resume/Roshan_Ebinesar_Resume.pdf" class="btn btn--ghost" download>Download Resume</a>
+          </div>
+
+          <div class="hero__socials">
+            <a href="https://github.com/roshan2005-ux">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
+            </a>
+            <a href="mailto:roshanebi005@gmail.com">
+              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M1.5 4.5h21a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-21a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1Zm.9 2 9.6 7.1 9.6-7.1H2.4Zm19.6 1.9-8.7 6.4a1.5 1.5 0 0 1-1.8 0L2.8 8.4v10.6h19.2V8.4Z"/></svg>
+            </a>
+          </div>
+
+          <p class="hero__tags">Full-Stack Development &bull; Web Technologies &bull; Cybersecurity</p>
+        </div>
+
+        <div class="hero__visual reveal" aria-hidden="true">
+          <div class="terminal">
+            <div class="terminal__bar">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+              <span class="terminal__title">whoami.js</span>
+            </div>
+            <pre class="terminal__body"><code id="typedCode"></code><span class="cursor">&#9608;</span></pre>
+          </div>
+          <div class="badge-float badge-float--1">JavaScript</div>
+          <div class="badge-float badge-float--2">React</div>
+          <div class="badge-float badge-float--3">Node.js</div>
+          <div class="badge-float badge-float--4">Security</div>
+        </div>
+
+      </div>
+
+      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
+        <span></span>
+      </a>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">About Me</p>
+        <h2 class="section__title reveal">Building things, one project at a time</h2>
+
+        <div class="about__grid">
+          <p class="about__text reveal">
+            I'm a Computer Science Engineering student with a strong interest in full-stack
+            web development. I enjoy working across the stack &mdash; from structuring interfaces
+            with HTML, CSS and JavaScript to exploring how backend logic, APIs and databases
+            connect everything together. I use Git and GitHub to manage and track my projects.
+            Alongside development, I've been building a growing interest in cybersecurity,
+            particularly around web and API security. Most of what I know has come from
+            building real projects, breaking things, and figuring out how to fix them.
+          </p>
+
+          <div class="about__cards">
+            <div class="info-card reveal">
+              <div class="info-card__icon">🎓</div>
+              <h3>CSE Student</h3>
+              <p>Currently studying Computer Science and Engineering.</p>
+            </div>
+            <div class="info-card reveal">
+              <div class="info-card__icon">💻</div>
+              <h3>Full-Stack Developer</h3>
+              <p>Learning and building across the frontend and backend.</p>
+            </div>
+            <div class="info-card reveal">
+              <div class="info-card__icon">🛠️</div>
+              <h3>Project Builder</h3>
+              <p>Prefers learning by shipping real, working projects.</p>
+            </div>
+            <div class="info-card reveal">
+              <div class="info-card__icon">🔐</div>
+              <h3>Cybersecurity Interest</h3>
+              <p>Exploring web and API security concepts alongside development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SKILLS ============ -->
+    <section class="section section--alt" id="skills">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">Skills</p>
+        <h2 class="section__title reveal">Technologies I work with</h2>
+
+        <div class="skills__grid">
+
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title">Frontend</h3>
+            <div class="skill-badges">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">JavaScript</span>
+              <span class="badge badge--learning">React <em>Learning</em></span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title">Backend</h3>
+            <div class="skill-badges">
+              <span class="badge badge--learning">Node.js <em>Learning</em></span>
+              <span class="badge badge--learning">Express.js <em>Learning</em></span>
+              <span class="badge badge--learning">REST APIs <em>Learning</em></span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title">Database</h3>
+            <div class="skill-badges">
+              <span class="badge badge--learning">MongoDB <em>Learning</em></span>
+              <span class="badge">MySQL</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title">Tools</h3>
+            <div class="skill-badges">
+              <span class="badge">Git</span>
+              <span class="badge">GitHub</span>
+              <span class="badge">VS Code</span>
+            </div>
+          </div>
+
+          <div class="skill-card reveal">
+            <h3 class="skill-card__title">Cybersecurity</h3>
+            <div class="skill-badges">
+              <span class="badge badge--learning">Web Security <em>Learning</em></span>
+              <span class="badge badge--learning">API Security <em>Learning</em></span>
+              <span class="badge badge--learning">Vulnerability Awareness <em>Learning</em></span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROJECTS ============ -->
+    <section class="section" id="projects">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">Featured Projects</p>
+        <h2 class="section__title reveal">Things I've built &amp; things I'm building</h2>
+
+        <div class="projects__grid">
+
+          <!-- Project 1: WolfScanX -->
+          <article class="project-card reveal">
+            <div class="project-card__media">
+              <!-- Place a screenshot at assets/projects/wolfscanx.png -->
+              <img src="assets/projects/wolfscanx.png" alt="WolfScanX app concept preview" loading="lazy"
+                   onerror="this.closest('.project-card__media').classList.add('project-card__media--empty')">
+              <span class="project-card__number">01</span>
+            </div>
+            <div class="project-card__body">
+              <h3>WolfScanX</h3>
+              <p>An Android application concept focused on scanning QR codes and checking potentially suspicious or malicious destinations.</p>
+              <div class="project-card__tech">
+                <span class="chip">Android</span>
+                <span class="chip">QR Scanning</span>
+                <span class="chip">Security</span>
+              </div>
+              <div class="project-card__links">
+                <a href="https://github.com/roshan2005-ux" class="btn btn--small" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://github.com/roshan2005-ux" class="btn btn--small btn--outline" target="_blank" rel="noopener">Live Demo</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: Full-Stack Web Application (coming soon) -->
+          <article class="project-card project-card--soon reveal">
+            <div class="project-card__media project-card__media--empty">
+              <span class="project-card__number">02</span>
+              <span class="soon-tag">Coming Soon</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Full-Stack Web Application</h3>
+              <p>Coming soon &mdash; a full-stack application demonstrating frontend, backend, API and database integration.</p>
+              <div class="project-card__tech">
+                <span class="chip">TBD</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="btn btn--small btn--disabled" aria-disabled="true">COMING_SOON</a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: Cybersecurity Project (coming soon) -->
+          <article class="project-card project-card--soon reveal">
+            <div class="project-card__media project-card__media--empty">
+              <span class="project-card__number">03</span>
+              <span class="soon-tag">Coming Soon</span>
+            </div>
+            <div class="project-card__body">
+              <h3>Cybersecurity Project</h3>
+              <p>Coming soon &mdash; a practical cybersecurity project focused on understanding and identifying common web security issues.</p>
+              <div class="project-card__tech">
+                <span class="chip">TBD</span>
+              </div>
+              <div class="project-card__links">
+                <a href="#" class="btn btn--small btn--disabled" aria-disabled="true">COMING_SOON</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ LEARNING JOURNEY ============ -->
+    <section class="section section--alt" id="journey">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">Learning Journey</p>
+        <h2 class="section__title reveal">How I got here</h2>
+
+        <div class="timeline">
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2024</div>
+            <div class="timeline__content">
+              <p>Started building foundations in Computer Science and programming.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2025</div>
+            <div class="timeline__content">
+              <p>Explored web development, programming, Git/GitHub and cybersecurity concepts.</p>
+            </div>
+          </div>
+          <div class="timeline__item reveal">
+            <div class="timeline__year">2026</div>
+            <div class="timeline__content">
+              <p>Focused on full-stack development, project building and improving practical development skills.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ EDUCATION ============ -->
+    <section class="section" id="education">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">Education</p>
+        <h2 class="section__title reveal">Academic background</h2>
+
+        <div class="education-card reveal">
+          <div class="education-card__icon">🎓</div>
+          <div>
+            <h3>Computer Science and Engineering</h3>
+            <p class="education-card__meta">Anna University</p>
+            <p class="education-card__status">Currently pursuing 3rd Year</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CERTIFICATIONS ============ -->
+    <section class="section section--alt" id="certifications">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">Certifications</p>
+        <h2 class="section__title reveal">Courses & certificates</h2>
+
+        <div class="cert__grid">
+          <a href="assets/certificates/NM_Certificate.pdf" class="cert-card reveal" target="_blank" rel="noopener">
+            <span class="cert-card__number">Certificate 01</span>
+            <span class="cert-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </span>
+            <span class="cert-card__name">NM</span>
+            <span class="cert-card__meta">Platform &bull; Year</span>
+            <span class="cert-card__btn">View Certificate</span>
+          </a>
+          <a href="assets/certificates/NM_Certificate%20(1).pdf" class="cert-card reveal" target="_blank" rel="noopener">
+            <span class="cert-card__number">Certificate 02</span>
+            <span class="cert-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </span>
+            <span class="cert-card__name">NM</span>
+            <span class="cert-card__meta">Platform &bull; Year</span>
+            <span class="cert-card__btn">View Certificate</span>
+          </a>
+          <a href="assets/certificates/ROSHAN%20EBINESAR.J%20(1).pdf" class="cert-card reveal" target="_blank" rel="noopener">
+            <span class="cert-card__number">Certificate 03</span>
+            <span class="cert-card__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+            </span>
+            <span class="cert-card__name">Internship</span>
+            <span class="cert-card__meta">Platform &bull; Year</span>
+            <span class="cert-card__btn">View Certificate</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GITHUB / LINKEDIN ============ -->
+    <section class="section" id="social">
+      <div class="section__inner">
+        <p class="section__eyebrow reveal">Find Me Online</p>
+        <h2 class="section__title reveal">GitHub &amp; LinkedIn</h2>
+
+        <div class="social__grid">
+          <a href="https://github.com/roshan2005-ux" class="social-card reveal" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+            <div>
+              <h3>GitHub</h3>
+              <p>github.com/roshan2005-ux</p>
+            </div>
+          </a>
+          <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" class="social-card reveal" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
+            <div>
+              <h3>LinkedIn</h3>
+              <p>linkedin.com/in/roshan-ebinesar-235321338</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CONTACT ============ -->
+    <section class="section section--alt" id="contact">
+      <div class="section__inner section__inner--narrow">
+        <p class="section__eyebrow reveal">Contact</p>
+        <h2 class="section__title reveal">Let's Build Something</h2>
+        <p class="contact__desc reveal">
+          Have a project idea, collaboration opportunity, or just want to connect?
+          Feel free to reach out.
+        </p>
+
+        <div class="contact__actions reveal">
+          <a href="mailto:roshanebi005@gmail.com" class="btn btn--primary">Email Me</a>
+          <a href="https://github.com/roshan2005-ux" class="btn btn--ghost" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div>
+        <p class="footer__name">Roshan Ebinesar</p>
+        <p class="footer__role">Full-Stack Developer</p>
+      </div>
+
+      <div class="footer__socials">
+        <a href="https://github.com/roshan2005-ux" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
+        </a>
+        <a href="mailto:roshanebi005@gmail.com" class="social-icon" aria-label="Email">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M1.5 4.5h21a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-21a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1Zm.9 2 9.6 7.1 9.6-7.1H2.4Zm19.6 1.9-8.7 6.4a1.5 1.5 0 0 1-1.8 0L2.8 8.4v10.6h19.2V8.4Z"/></svg>
+        </a>
+      </div>
+    </div>
+    <p class="footer__copy">&copy; 2026 Roshan Ebinesar. All rights reserved.</p>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
