@@ -3,40 +3,114 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Roshan Ebinesar | Full-Stack Developer</title>
-  <meta name="description" content="Roshan Ebinesar — Computer Science Engineering student and full-stack developer building modern, responsive web applications, with a growing interest in cybersecurity.">
+  <title>Roshan Ebinesar | Cinematic Film Portfolio</title>
+  <meta name="description" content="A cinematic film-style portfolio introducing Roshan Ebinesar — Full-Stack Developer & CSE Student building next-generation digital experiences, AI platforms, and cybersecurity tools.">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Roshan Ebinesar | Full-Stack Developer">
-  <meta property="og:description" content="Portfolio of Roshan Ebinesar — CSE student, full-stack developer, and cybersecurity enthusiast.">
-   <meta property="og:type" content="website">
-  <link rel="icon" type="image/png" href="assets/profile/favicon.png">
+  <meta property="og:title" content="Roshan Ebinesar | Cinematic Developer Portfolio">
+  <meta property="og:description" content="An interactive film-style introduction to Roshan Ebinesar — Full-Stack Developer, AI Platform Builder, and FusionX Hackathon 3rd Prize Team Leader.">
+  <meta property="og:type" content="website">
+  <!-- Favicon with Custom Monogram R -->
+  <link rel="icon" type="image/svg+xml" href="assets/profile/roshan-logo.svg">
+  <link rel="apple-touch-icon" href="assets/profile/roshan-logo.svg">
 
+  <!-- Fonts: Inter for clean luxury typography, JetBrains Mono for technical film timecodes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="film-body">
 
-  <!-- ============ NAVBAR ============ -->
-  <header class="navbar" id="navbar">
-    <div class="navbar__inner">
-      <a href="#home" class="navbar__logo">ROSHAN<span>.</span>EBINESAR</a>
+  <!-- ============ SUBTLE FILM GRAIN & VIGNETTE OVERLAY ============ -->
+  <div class="film-grain-overlay" aria-hidden="true"></div>
+  <div class="film-vignette" aria-hidden="true"></div>
 
-      <nav class="navbar__nav" id="navMenu">
-        <a href="#home" class="nav-link active" data-nav>Home</a>
-        <a href="#about" class="nav-link" data-nav>About</a>
-        <a href="#skills" class="nav-link" data-nav>Skills</a>
-        <a href="#projects" class="nav-link" data-nav>Projects</a>
-        <a href="#journey" class="nav-link" data-nav>Journey</a>
-        <a href="#education" class="nav-link" data-nav>Education</a>
-        <a href="#certifications" class="nav-link" data-nav>Certifications</a>
-        <a href="#contact" class="nav-link nav-link--cta" data-nav>Contact</a>
+  <!-- ============ CUSTOM CINEMATIC CURSOR (Desktop Only) ============ -->
+  <div class="custom-cursor" id="cursorDot" aria-hidden="true"></div>
+  <div class="custom-cursor-ring" id="cursorRing" aria-hidden="true">
+    <span class="cursor-text" id="cursorText"></span>
+  </div>
+
+  <!-- ============ CINEMATIC OPENING (SCENE 00: THE FILM PROLOGUE) ============ -->
+  <aside class="cinematic-prologue" id="cinematicPrologue" aria-label="Cinematic Film Opening">
+    <div class="prologue__void" aria-hidden="true"></div>
+    <div class="prologue__light-cone" aria-hidden="true"></div>
+    
+    <div class="prologue__stage">
+      <!-- Monogram R Brand Emblem -->
+      <div class="prologue__brand-emblem">
+        <img src="assets/profile/roshan-logo.svg" alt="Roshan Monogram R" class="prologue__logo-img">
+      </div>
+
+      <!-- Portrait reveal: Silhouette to illuminated face with slow camera push-in -->
+      <div class="prologue__portrait-container">
+        <div class="prologue__rim-glow" aria-hidden="true"></div>
+        <img src="assets/profile/roshan-portrait.jpg" alt="Roshan Ebinesar" class="prologue__portrait-img" id="prologuePortrait">
+        <div class="prologue__shadow-mask" aria-hidden="true"></div>
+      </div>
+
+      <!-- Sequential Typography Reveal: ROSHAN -> EBINESAR -> FULL-STACK DEVELOPER -->
+      <div class="prologue__text-sequence">
+        <div class="prologue__line prologue__line--first">
+          <span class="prologue__letter-span">ROSHAN</span>
+        </div>
+        <div class="prologue__line prologue__line--second">
+          <span class="prologue__letter-span prologue__highlight">EBINESAR</span>
+        </div>
+        <div class="prologue__line prologue__line--role">
+          <span class="prologue__role-text">FULL-STACK DEVELOPER</span>
+        </div>
+        <div class="prologue__line prologue__line--tagline">
+          <span class="prologue__tagline-text">BUILDING DIGITAL EXPERIENCES THAT FEEL DIFFERENT.</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Minimal Film Timecode & Skip Button -->
+    <div class="prologue__footer">
+      <div class="prologue__timecode">
+        <span class="rec-dot"></span>
+        <span id="prologueTimecode">00:00:00:00</span>
+      </div>
+      <button class="prologue__skip-btn" id="skipPrologue" aria-label="Skip prologue and enter film">
+        <span>ENTER SHOWCASE</span>
+        <kbd>ESC</kbd>
+      </button>
+    </div>
+  </aside>
+
+  <!-- ============ BACKGROUND CANVAS (Atmospheric Dust Motes & Light Rays) ============ -->
+  <canvas id="filmCanvas" class="film-canvas" aria-hidden="true"></canvas>
+
+  <!-- ============ MINIMAL FILM INTERFACE NAVBAR ============ -->
+  <header class="film-navbar" id="filmNavbar">
+    <div class="film-navbar__inner">
+      
+      <!-- Film Brand Logo & Scene Indicator -->
+      <a href="#scene-intro" class="navbar__brand" data-cursor="link" aria-label="Roshan Ebinesar Home">
+        <img src="assets/profile/roshan-logo.svg" alt="Roshan Monogram R" class="navbar__logo-img">
+        <div class="navbar__brand-text">
+          <span class="navbar__brand-name">ROSHAN<b>.</b>EBINESAR</span>
+          <span class="navbar__scene-id" id="currentSceneTag">SCENE 01 // PROLOGUE</span>
+        </div>
+      </a>
+
+      <!-- Minimal Scene Links -->
+      <nav class="navbar__scene-nav" id="navMenu" aria-label="Film Navigation">
+        <a href="#scene-intro" class="film-nav-link active" data-nav>HOME</a>
+        <a href="#scene-about" class="film-nav-link" data-nav>ABOUT</a>
+        <a href="#scene-skills" class="film-nav-link" data-nav>SKILLS</a>
+        <a href="#scene-work" class="film-nav-link" data-nav>WORK</a>
+        <a href="#scene-fusionx" class="film-nav-link" data-nav>ACHIEVEMENTS</a>
+        <a href="#scene-certificates" class="film-nav-link" data-nav>CERTIFICATES</a>
+        <a href="#scene-resume" class="film-nav-link" data-nav>RESUME</a>
+        <a href="#scene-contact" class="film-nav-link film-nav-link--cta" data-nav data-cursor="action">CONTACT</a>
       </nav>
 
-      <button class="navbar__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+      <!-- Mobile Menu Toggle -->
+      <button class="navbar__mobile-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navMenu">
         <span></span>
         <span></span>
         <span></span>
@@ -44,393 +118,844 @@
     </div>
   </header>
 
-  <main id="top">
+  <main id="filmScenes" class="film-scenes-wrapper">
 
-    <!-- ============ HERO ============ -->
-    <section class="hero" id="home">
-      <div class="hero__bg" aria-hidden="true"></div>
-      <div class="hero__inner">
+    <!-- =========================================================
+         SCENE 01: THE INTRODUCTION (HERO SCENE)
+         ========================================================= -->
+    <section class="film-scene film-scene--hero" id="scene-intro" data-scene="SCENE 01 // INTRODUCTION">
+      <div class="scene-atmosphere" aria-hidden="true">
+        <div class="volumetric-haze"></div>
+        <div class="volumetric-shaft volumetric-shaft--cyan"></div>
+        <div class="volumetric-shaft volumetric-shaft--warm"></div>
+        <div class="architectural-grid"></div>
+      </div>
 
-        <div class="hero__content reveal">
-          <div class="hero__profile">
-            <img src="assets/profile/roshan.jpeg" alt="Roshan Ebinesar" class="hero__avatar">
+      <div class="hero-stage">
+        
+        <!-- Left Column: Typography & Intentional Film Composition -->
+        <div class="hero-narrative" data-parallax="0.02">
+          
+          <!-- Hero Brand Mark with Custom Monogram R -->
+          <div class="hero-brand-mark reveal">
+            <img src="assets/profile/roshan-logo.svg" alt="Roshan Monogram R" class="hero-brand-monogram">
+            <div class="hero-brand-line"></div>
+            <span class="hero-brand-tag">REEL 2026 // OFFICIAL</span>
           </div>
-          <p class="hero__eyebrow">Hi, I'm</p>
-          <h1 class="hero__name">Roshan Ebinesar</h1>
-          <h2 class="hero__role">Full&#8209;Stack Developer</h2>
-          <p class="hero__desc">
-            Computer Science Engineering student focused on building modern, responsive
-            and user-focused web applications while continuously improving my
-            full-stack development skills.
+
+          <div class="scene-marker reveal">
+            <span class="scene-number">SCENE 01</span>
+            <span class="scene-desc">CHARACTER INTRODUCTION</span>
+          </div>
+
+          <p class="hero-eyebrow reveal">HELLO, I'M</p>
+
+          <h1 class="hero-title reveal">
+            <span class="hero-name-part">ROSHAN</span>
+            <span class="hero-name-part hero-name-part--accent">EBINESAR</span>
+          </h1>
+
+          <h2 class="hero-subtitle reveal">FULL-STACK DEVELOPER</h2>
+
+          <p class="hero-logline reveal">
+            Building digital experiences that feel different. A Computer Science Engineering student engineering at the intersection of modern full-stack systems, intelligent AI platforms, and cybersecurity.
           </p>
 
-          <div class="hero__actions">
-            <a href="#projects" class="btn btn--primary">View My Work</a>
-            <a href="assets/resume/Roshan_Ebinesar_Resume.pdf" class="btn btn--ghost" download>Download Resume</a>
-          </div>
-
-          <div class="hero__socials">
-            <a href="https://github.com/roshan2005-ux">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+          <div class="hero-controls reveal">
+            <a href="#scene-work" class="film-btn film-btn--primary" data-cursor="action">
+              <span>EXPLORE WORKS</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
             </a>
-            <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
-            </a>
-            <a href="mailto:roshanebi005@gmail.com">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M1.5 4.5h21a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-21a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1Zm.9 2 9.6 7.1 9.6-7.1H2.4Zm19.6 1.9-8.7 6.4a1.5 1.5 0 0 1-1.8 0L2.8 8.4v10.6h19.2V8.4Z"/></svg>
+            <a href="#scene-contact" class="film-btn film-btn--ghost" data-cursor="action">
+              <span>INITIALIZE CONTACT</span>
             </a>
           </div>
 
-          <p class="hero__tags">Full-Stack Development &bull; Web Technologies &bull; Cybersecurity</p>
+          <!-- Verified Key Metrics -->
+          <div class="hero-dossier-stats reveal">
+            <div class="dossier-stat">
+              <span class="dossier-val">4+</span>
+              <span class="dossier-lbl">PROJECTS SHIPPED</span>
+            </div>
+            <div class="dossier-sep"></div>
+            <div class="dossier-stat">
+              <span class="dossier-val">3<sup>RD</sup></span>
+              <span class="dossier-lbl">FUSIONX PRIZE (LEADER)</span>
+            </div>
+            <div class="dossier-sep"></div>
+            <div class="dossier-stat">
+              <span class="dossier-val">5+</span>
+              <span class="dossier-lbl">CERTIFICATIONS</span>
+            </div>
+          </div>
+
+          <!-- Social Links -->
+          <div class="hero-social-strip reveal">
+            <a href="https://github.com/roshan2005-ux" class="film-social-pill" target="_blank" rel="noopener" aria-label="GitHub Profile" data-cursor="link">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+              <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" class="film-social-pill" target="_blank" rel="noopener" aria-label="LinkedIn Profile" data-cursor="link">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
+              <span>LinkedIn</span>
+            </a>
+            <a href="mailto:roshanebi005@gmail.com" class="film-social-pill" aria-label="Email Roshan" data-cursor="link">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M1.5 4.5h21a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-21a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1Zm.9 2 9.6 7.1 9.6-7.1H2.4Zm19.6 1.9-8.7 6.4a1.5 1.5 0 0 1-1.8 0L2.8 8.4v10.6h19.2V8.4Z"/></svg>
+              <span>Email</span>
+            </a>
+          </div>
         </div>
 
-        <div class="hero__visual reveal" aria-hidden="true">
-          <div class="terminal">
-            <div class="terminal__bar">
-              <span class="dot dot--red"></span>
-              <span class="dot dot--yellow"></span>
-              <span class="dot dot--green"></span>
-              <span class="terminal__title">whoami.js</span>
+        <!-- Right Column: Real Character Portrait & Cinematic HUD Cards -->
+        <div class="hero-cinematic-visual" id="heroVisual">
+          <div class="character-diorama" data-parallax="0.04">
+            
+            <!-- Cinematic Backlight Halo -->
+            <div class="character-backlight" aria-hidden="true"></div>
+
+            <!-- Central Portrait Frame with Dramatic Side/Rim Lighting -->
+            <div class="character-frame">
+              <img src="assets/profile/roshan-portrait.jpg" alt="Roshan Ebinesar — Movie Character Introduction" class="character-portrait" id="heroPortrait">
+              <div class="character-lighting-vignette" aria-hidden="true"></div>
+              <div class="character-depth-shadow" aria-hidden="true"></div>
             </div>
-            <pre class="terminal__body"><code id="typedCode"></code><span class="cursor">&#9608;</span></pre>
+
+            <!-- FLOATING HUD 01: FUSIONX 2026 -->
+            <div class="film-hud film-hud--1 tilt-card" data-parallax="0.065" data-cursor="view">
+              <div class="film-hud__header">
+                <span class="hud-pip hud-pip--gold"></span>
+                <span class="hud-label">KEY MILESTONE</span>
+              </div>
+              <h3 class="film-hud__title">FUSIONX 2026</h3>
+              <p class="film-hud__detail">3RD PRIZE &bull; TEAM LEADER</p>
+              <span class="film-hud__sub">AWS Student Builder Group</span>
+            </div>
+
+            <!-- FLOATING HUD 02: PLACEMENT LAUNCHPAD AI -->
+            <a href="https://github.com/roshan2005-ux/Placement-launchpad-ai" target="_blank" rel="noopener" class="film-hud film-hud--2 tilt-card" data-parallax="0.08" data-cursor="link">
+              <div class="film-hud__header">
+                <span class="hud-pip hud-pip--cyan"></span>
+                <span class="hud-label">FLAGSHIP REPOSITORY</span>
+              </div>
+              <h3 class="film-hud__title">PLACEMENT LAUNCHPAD AI</h3>
+              <p class="film-hud__detail">AI RESUME &amp; CAREER PLATFORM</p>
+              <span class="film-hud__action">Inspect Codebase ↗</span>
+            </a>
+
+            <!-- FLOATING HUD 03: AWS STUDENT COMMUNITY DAY -->
+            <div class="film-hud film-hud--3 tilt-card" data-parallax="0.05" data-cursor="view">
+              <div class="film-hud__header">
+                <span class="hud-pip hud-pip--blue"></span>
+                <span class="hud-label">CLOUD RECOGNITION</span>
+              </div>
+              <h3 class="film-hud__title">AWS COMMUNITY DAY</h3>
+              <p class="film-hud__detail">31ST AUGUST 2026</p>
+              <span class="film-hud__sub">SKP Engineering College</span>
+            </div>
+
+            <!-- FLOATING HUD 04: TECH FOCUS -->
+            <div class="film-hud film-hud--4 tilt-card" data-parallax="0.07" data-cursor="view">
+              <div class="film-hud__header">
+                <span class="hud-pip hud-pip--slate"></span>
+                <span class="hud-label">DISCIPLINE</span>
+              </div>
+              <h3 class="film-hud__title">FULL-STACK &amp; AI</h3>
+              <p class="film-hud__detail">ARCHITECTURE &bull; SECURITY</p>
+              <div class="film-hud__tags">
+                <span>React</span><span>Node</span><span>Python</span>
+              </div>
+            </div>
+
           </div>
-          <div class="badge-float badge-float--1">JavaScript</div>
-          <div class="badge-float badge-float--2">React</div>
-          <div class="badge-float badge-float--3">Node.js</div>
-          <div class="badge-float badge-float--4">Security</div>
         </div>
 
       </div>
 
-      <a href="#about" class="scroll-cue" aria-label="Scroll to About section">
-        <span></span>
+      <!-- Cinematic Scene Scroll Indicator -->
+      <a href="#scene-about" class="film-scroll-cue" aria-label="Advance to next scene" data-cursor="action">
+        <span class="cue-label">SCENE 02 &darr;</span>
+        <div class="cue-track"><span class="cue-thumb"></span></div>
       </a>
     </section>
 
-    <!-- ============ ABOUT ============ -->
-    <section class="section" id="about">
-      <div class="section__inner">
-        <p class="section__eyebrow reveal">About Me</p>
-        <h2 class="section__title reveal">Building things, one project at a time</h2>
+    <!-- =========================================================
+         SCENE 02: THE PROFILE (ABOUT ME)
+         ========================================================= -->
+    <section class="film-scene" id="scene-about" data-scene="SCENE 02 // PROFILE">
+      <div class="scene-inner">
+        <div class="scene-header reveal">
+          <div class="scene-tag">// SCENE 02 &bull; DOSSIER</div>
+          <h2 class="scene-title">Engineering Digital Experiences with Intent</h2>
+        </div>
 
-        <div class="about__grid">
-          <p class="about__text reveal">
-            I'm a Computer Science Engineering student with a strong interest in full-stack
-            web development. I enjoy working across the stack &mdash; from structuring interfaces
-            with HTML, CSS and JavaScript to exploring how backend logic, APIs and databases
-            connect everything together. I use Git and GitHub to manage and track my projects.
-            Alongside development, I've been building a growing interest in cybersecurity,
-            particularly around web and API security. Most of what I know has come from
-            building real projects, breaking things, and figuring out how to fix them.
+        <div class="about-widescreen-grid">
+          <div class="about-prose reveal">
+            <p class="film-lead">
+              I'm Roshan Ebinesar &mdash; a Computer Science Engineering student committed to the craft of building responsive, robust, and purposeful digital software.
+            </p>
+            <p>
+              My work spans the entire architectural spectrum. On the client side, I engineer fluid, atmospheric user interfaces using HTML5, modern CSS3, JavaScript, and React. On the server side, I design and connect RESTful APIs, business logic, and databases utilizing Node.js, Express, Python, MongoDB, and MySQL.
+            </p>
+            <p>
+              Beyond feature delivery, I investigate web and API security &mdash; identifying vulnerabilities, understanding potential attack vectors, and writing hardened code. My ethos is grounded in shipping real, working software: building, breaking, analyzing, and perfecting.
+            </p>
+
+            <div class="dossier-signature">
+              <div class="sig-accent-line"></div>
+              <span class="sig-name">ROSHAN EBINESAR &mdash; CSE STUDENT &amp; DEVELOPER</span>
+            </div>
+          </div>
+
+          <div class="about-dossier-cards">
+            
+            <div class="film-dossier-card reveal tilt-card" data-cursor="view">
+              <div class="dossier-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 3 6 3 6 3s6 0 6-3v-5"/></svg>
+              </div>
+              <h3>Computer Science Student</h3>
+              <p>3rd Year B.E. Computer Science and Engineering at Anna University / SKP Engineering College.</p>
+            </div>
+
+            <div class="film-dossier-card reveal tilt-card" data-cursor="view">
+              <div class="dossier-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+              </div>
+              <h3>Full-Stack Architecture</h3>
+              <p>Developing seamless integration between intuitive frontend experiences, microservices, and databases.</p>
+            </div>
+
+            <div class="film-dossier-card reveal tilt-card" data-cursor="view">
+              <div class="dossier-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+              </div>
+              <h3>Hackathon Leadership</h3>
+              <p>Led our engineering team to 3rd Prize at the FusionX 24-Hour Hackathon by AWS Student Builder Group.</p>
+            </div>
+
+            <div class="film-dossier-card reveal tilt-card" data-cursor="view">
+              <div class="dossier-icon">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              </div>
+              <h3>Cybersecurity Analysis</h3>
+              <p>Continuous exploration of web application vulnerability identification, secure authentication, and defensive protocols.</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SCENE 03: THE MATRIX (SKILLS & TECHNOLOGIES)
+         ========================================================= -->
+    <section class="film-scene film-scene--alt" id="scene-skills" data-scene="SCENE 03 // MATRIX">
+      <div class="scene-inner">
+        <div class="scene-header reveal">
+          <div class="scene-tag">// SCENE 03 &bull; TECHNICAL CAPABILITIES</div>
+          <h2 class="scene-title">Disciplines &amp; Engineered Stack</h2>
+        </div>
+
+        <div class="matrix-grid">
+          
+          <div class="matrix-panel reveal tilt-card">
+            <div class="matrix-panel__head">
+              <span class="matrix-idx">01</span>
+              <h3>Frontend Systems</h3>
+            </div>
+            <div class="matrix-tags">
+              <span class="mtag mtag--active">HTML5 Semantic</span>
+              <span class="mtag mtag--active">CSS3 / Grid &amp; Flex</span>
+              <span class="mtag mtag--active">JavaScript (ES6+)</span>
+              <span class="mtag mtag--learning">React.js <em>Learning</em></span>
+            </div>
+          </div>
+
+          <div class="matrix-panel reveal tilt-card">
+            <div class="matrix-panel__head">
+              <span class="matrix-idx">02</span>
+              <h3>Backend &amp; APIs</h3>
+            </div>
+            <div class="matrix-tags">
+              <span class="mtag mtag--learning">Node.js <em>Learning</em></span>
+              <span class="mtag mtag--learning">Express.js <em>Learning</em></span>
+              <span class="mtag mtag--active">RESTful Architectures</span>
+              <span class="mtag mtag--active">Python</span>
+            </div>
+          </div>
+
+          <div class="matrix-panel reveal tilt-card">
+            <div class="matrix-panel__head">
+              <span class="matrix-idx">03</span>
+              <h3>Database Engineering</h3>
+            </div>
+            <div class="matrix-tags">
+              <span class="mtag mtag--active">MySQL</span>
+              <span class="mtag mtag--learning">MongoDB <em>Learning</em></span>
+              <span class="mtag mtag--active">Relational Modeling</span>
+            </div>
+          </div>
+
+          <div class="matrix-panel reveal tilt-card">
+            <div class="matrix-panel__head">
+              <span class="matrix-idx">04</span>
+              <h3>Ecosystem &amp; Versioning</h3>
+            </div>
+            <div class="matrix-tags">
+              <span class="mtag mtag--active">Git</span>
+              <span class="mtag mtag--active">GitHub Workflows</span>
+              <span class="mtag mtag--active">VS Code Environment</span>
+            </div>
+          </div>
+
+          <div class="matrix-panel reveal tilt-card">
+            <div class="matrix-panel__head">
+              <span class="matrix-idx">05</span>
+              <h3>Cybersecurity Focus</h3>
+            </div>
+            <div class="matrix-tags">
+              <span class="mtag mtag--learning">Web Application Security <em>Learning</em></span>
+              <span class="mtag mtag--learning">API Vulnerability Testing <em>Learning</em></span>
+              <span class="mtag mtag--learning">Defensive Practices <em>Learning</em></span>
+            </div>
+          </div>
+
+          <div class="matrix-panel reveal tilt-card">
+            <div class="matrix-panel__head">
+              <span class="matrix-idx">06</span>
+              <h3>AI &amp; Cloud Integration</h3>
+            </div>
+            <div class="matrix-tags">
+              <span class="mtag mtag--active">Gemini API</span>
+              <span class="mtag mtag--active">AI Resume Scoring</span>
+              <span class="mtag mtag--active">AWS Fundamentals</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SCENE 04: THE WORKS (FEATURED PROJECT SCENES)
+         ========================================================= -->
+    <section class="film-scene" id="scene-work" data-scene="SCENE 04 // WORKS">
+      <div class="scene-inner">
+        <div class="scene-header reveal">
+          <div class="scene-tag">// SCENE 04 &bull; PROJECT SHOWCASE</div>
+          <h2 class="scene-title">Featured Works &amp; Systems</h2>
+        </div>
+
+        <div class="film-project-sequence">
+
+          <!-- PROJECT 01: PLACEMENT LAUNCHPAD AI -->
+          <article class="film-shot-project reveal" id="shot-placement">
+            <div class="film-shot__viewport">
+              <div class="film-shot__art film-shot__art--ai">
+                <div class="film-shot__hud">
+                  <span class="film-status-pip">● SYSTEM ACTIVE</span>
+                  <span class="film-shot-index">SHOT 01</span>
+                </div>
+                <div class="ai-platform-visual">
+                  <div class="ai-scanner-line"></div>
+                  <div class="ai-score-dossier">
+                    <span class="dossier-headline">RESUME MATCH INDEX: 94.8%</span>
+                    <span class="dossier-sub">KEYWORD EXTRACTION &bull; SKILL MATRIX MATCH</span>
+                  </div>
+                </div>
+                <div class="film-shot__code-block">
+                  <code>&gt; PLACEMENT LAUNCHPAD AI // CORE ENGINE</code>
+                  <code>&gt; AI-Powered placement readiness &amp; resume optimization platform</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-shot__narrative">
+              <div class="shot-meta">
+                <span class="shot-category">AI &bull; FULL-STACK PLATFORM</span>
+                <span class="shot-repo-note">PUBLIC REPOSITORY</span>
+              </div>
+              <h3 class="shot-title">PLACEMENT LAUNCHPAD AI</h3>
+              <p class="shot-summary">
+                An intelligent, full-stack placement and resume evaluation platform engineered to help students analyze their career readiness, evaluate resume alignment against technical roles, and receive actionable insights using automated AI analysis.
+              </p>
+              
+              <div class="shot-tags">
+                <span class="film-chip film-chip--accent">AI Integration</span>
+                <span class="film-chip">Full-Stack</span>
+                <span class="film-chip">Resume Analysis</span>
+                <span class="film-chip">Web Platform</span>
+              </div>
+
+              <div class="shot-actions">
+                <a href="https://github.com/roshan2005-ux/Placement-launchpad-ai" target="_blank" rel="noopener" class="film-btn film-btn--primary film-btn--small" data-cursor="action">
+                  <span>VIEW ON GITHUB</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 02: WOLFSCANX -->
+          <article class="film-shot-project film-shot-project--reverse reveal" id="shot-wolfscanx">
+            <div class="film-shot__viewport">
+              <div class="film-shot__img-frame">
+                <img src="assets/projects/wolfscanx.png" alt="WolfScanX - Android Cybersecurity QR Scanner" loading="lazy" class="film-shot-img">
+                <div class="film-scan-sweeper"></div>
+                <span class="film-shot-index">SHOT 02</span>
+              </div>
+            </div>
+
+            <div class="film-shot__narrative">
+              <div class="shot-meta">
+                <span class="shot-category">CYBERSECURITY &bull; ANDROID</span>
+                <span class="shot-repo-note">SECURITY CONCEPT</span>
+              </div>
+              <h3 class="shot-title">WOLFSCANX</h3>
+              <p class="shot-summary">
+                An Android cybersecurity application concept focused on scanning QR codes and proactively checking destination URLs for potentially suspicious, malicious, or deceptive payloads before the user navigates to them.
+              </p>
+              
+              <div class="shot-tags">
+                <span class="film-chip film-chip--accent">Android</span>
+                <span class="film-chip">QR Scanning</span>
+                <span class="film-chip">Cybersecurity</span>
+                <span class="film-chip">URL Defense</span>
+              </div>
+
+              <div class="shot-actions">
+                <a href="https://github.com/roshan2005-ux" target="_blank" rel="noopener" class="film-btn film-btn--primary film-btn--small" data-cursor="action">
+                  <span>VIEW ON GITHUB</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 03: FUSIONX 2026 PROJECT -->
+          <article class="film-shot-project reveal" id="shot-fusionx-proj">
+            <div class="film-shot__viewport">
+              <div class="film-shot__art film-shot__art--gold">
+                <div class="film-shot__hud">
+                  <span class="film-status-pip film-status-pip--gold">🏆 HACKATHON BUILD</span>
+                  <span class="film-shot-index">SHOT 03</span>
+                </div>
+                <div class="hackathon-badge-display">
+                  <span class="trophy-symbol">🏆</span>
+                  <span class="trophy-text">3RD PRIZE &bull; TEAM LEADER</span>
+                </div>
+                <div class="film-shot__code-block">
+                  <code>&gt; AWS Student Builder Group &mdash; SKPEC</code>
+                  <code>&gt; 24-Hour Intensive Collaborative Engineering</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-shot__narrative">
+              <div class="shot-meta">
+                <span class="shot-category shot-category--gold">24-HR HACKATHON WINNER</span>
+                <span class="shot-repo-note">TEAM LEADERSHIP</span>
+              </div>
+              <h3 class="shot-title">FUSIONX 2026 HACKATHON</h3>
+              <p class="shot-summary">
+                Award-winning 24-hour hackathon project built during FusionX, conducted by the AWS Student Builder Group at SKP Engineering College. Led system architecture, task prioritization, and delivered a working prototype securing 3rd Prize.
+              </p>
+              
+              <div class="shot-tags">
+                <span class="film-chip film-chip--gold">3rd Prize Award</span>
+                <span class="film-chip">Team Leader</span>
+                <span class="film-chip">Rapid Prototyping</span>
+                <span class="film-chip">AWS SBG</span>
+              </div>
+
+              <div class="shot-actions">
+                <a href="#scene-fusionx" class="film-btn film-btn--gold film-btn--small" data-cursor="action">
+                  <span>VIEW ACHIEVEMENT SCENE &rarr;</span>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 04: STUDENT MANAGEMENT SYSTEM -->
+          <article class="film-shot-project film-shot-project--reverse reveal" id="shot-sms">
+            <div class="film-shot__viewport">
+              <div class="film-shot__art film-shot__art--system">
+                <div class="film-shot__hud">
+                  <span class="film-status-pip">● INTERNSHIP VERIFIED</span>
+                  <span class="film-shot-index">SHOT 04</span>
+                </div>
+                <div class="system-architecture-diagram">
+                  <div class="arch-box">Client UI</div>
+                  <div class="arch-arrow">&rarr;</div>
+                  <div class="arch-box">REST API</div>
+                  <div class="arch-arrow">&rarr;</div>
+                  <div class="arch-box">Database</div>
+                </div>
+                <div class="film-shot__code-block">
+                  <code>&gt; Student Academic Record Management</code>
+                  <code>&gt; Verified Internship Engineering Experience</code>
+                </div>
+              </div>
+            </div>
+
+            <div class="film-shot__narrative">
+              <div class="shot-meta">
+                <span class="shot-category">INTERNSHIP &bull; FULL-STACK</span>
+                <span class="shot-repo-note">ACADEMIC SYSTEM</span>
+              </div>
+              <h3 class="shot-title">STUDENT MANAGEMENT SYSTEM</h3>
+              <p class="shot-summary">
+                A structured full-stack student management application built to manage student records, course registrations, and academic workflows, developed as part of verified internship practical experience.
+              </p>
+              
+              <div class="shot-tags">
+                <span class="film-chip film-chip--accent">Full-Stack</span>
+                <span class="film-chip">Database Modeling</span>
+                <span class="film-chip">CRUD Architecture</span>
+                <span class="film-chip">Internship</span>
+              </div>
+
+              <div class="shot-actions">
+                <a href="assets/certificates/ROSHAN%20EBINESAR.J%20(1).pdf" target="_blank" rel="noopener" class="film-btn film-btn--primary film-btn--small" data-cursor="action">
+                  <span>VIEW INTERNSHIP CERTIFICATE</span>
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SCENE 05: THE TRIUMPH (FUSIONX 2026 ACHIEVEMENT)
+         ========================================================= -->
+    <section class="film-scene film-scene--gold" id="scene-fusionx" data-scene="SCENE 05 // TRIUMPH">
+      <div class="scene-inner">
+        <div class="scene-header reveal">
+          <div class="scene-tag text-gold">// SCENE 05 &bull; MAJOR ACHIEVEMENT</div>
+          <h2 class="scene-title">FusionX 2026 &mdash; 3rd Prize &amp; Team Leader</h2>
+        </div>
+
+        <div class="achievement-cinema-spotlight reveal">
+          
+          <!-- Real Certificate with Camera Push-In Frame -->
+          <div class="achievement-cinema-frame tilt-card" id="fusionxCertCard" data-cursor="view">
+            <div class="cert-cinema-mat">
+              <img src="assets/certificates/fusionx-2026-certificate.jpg" alt="FusionX 2026 Hackathon 3rd Prize Certificate - Roshan Ebinesar" class="cert-real-img" id="fusionxCertImg">
+              <div class="cert-cinema-hover-prompt">
+                <span class="prompt-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>EXPAND CERTIFICATE PREVIEW</span>
+                </span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Verified Information Dossier -->
+          <div class="achievement-cinema-dossier">
+            <div class="achievement-cinema-badges">
+              <span class="film-award-badge">🏆 3RD PRIZE WINNER</span>
+              <span class="film-role-badge">TEAM LEADER</span>
+            </div>
+
+            <h3 class="achievement-cinema-title">FUSIONX &mdash; 24 HRS HACKATHON</h3>
+            <p class="achievement-cinema-sub">AWS Student Builder Group &bull; SKP Engineering College</p>
+
+            <div class="achievement-cinema-grid">
+              <div class="cin-meta-item">
+                <span class="cin-lbl">EVENT DATE</span>
+                <span class="cin-val">10.9.2026</span>
+              </div>
+              <div class="cin-meta-item">
+                <span class="cin-lbl">ACHIEVEMENT</span>
+                <span class="cin-val">Securing III / 3rd Prize</span>
+              </div>
+              <div class="cin-meta-item">
+                <span class="cin-lbl">ORGANIZED BY</span>
+                <span class="cin-val">AWS Student Builder Group</span>
+              </div>
+              <div class="cin-meta-item">
+                <span class="cin-lbl">INSTITUTION</span>
+                <span class="cin-val">SKP Engineering College</span>
+              </div>
+            </div>
+
+            <p class="achievement-cinema-prose">
+              Presented to Roshan Ebinesar J for securing 3rd Prize during the 24-hour FusionX hackathon. Served as Team Leader, guiding technical execution and leading the final demonstration under intense hackathon deadlines.
+            </p>
+
+            <button class="film-btn film-btn--gold" id="openFusionxModal" data-cursor="action">
+              <span>INSPECT FULL CERTIFICATE</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+            </button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SCENE 06: THE CREDENTIALS (AWS & CERTIFICATE ARCHIVE)
+         ========================================================= -->
+    <section class="film-scene film-scene--alt" id="scene-certificates" data-scene="SCENE 06 // CREDENTIALS">
+      <div class="scene-inner">
+        
+        <!-- AWS Student Community Day 2026 Spotlight -->
+        <div class="scene-header reveal">
+          <div class="scene-tag">// SCENE 06 &bull; CLOUD MILESTONE</div>
+          <h2 class="scene-title">AWS Student Community Day 2026</h2>
+        </div>
+
+        <div class="aws-cinema-spotlight reveal">
+          <div class="aws-cinema-dossier">
+            <span class="aws-cinema-chip">PARTICIPATION &amp; RECOGNITION</span>
+            <h3 class="aws-cinema-title">AWS STUDENT COMMUNITY DAY 2026</h3>
+            <p class="aws-cinema-prose">
+              Presented to Roshan Ebinesar in recognition of enthusiastic participation in AWS Student Community Day 2026, held on 31st August 2026 at SKP Engineering College, Tiruvannamalai.
+            </p>
+
+            <div class="aws-cinema-meta-list">
+              <div><strong>Event:</strong> AWS Student Community Day 2026</div>
+              <div><strong>Date:</strong> 31st August 2026</div>
+              <div><strong>Location:</strong> SKP Engineering College, Tiruvannamalai</div>
+              <div><strong>Candidate:</strong> Roshan Ebinesar</div>
+            </div>
+
+            <button class="film-btn film-btn--primary" id="openAwsModal" data-cursor="action">
+              <span>EXPAND AWS CERTIFICATE</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 3 21 3 21 9"/><polyline points="9 21 3 21 3 15"/><line x1="21" y1="3" x2="14" y2="10"/><line x1="3" y1="21" x2="10" y2="14"/></svg>
+            </button>
+          </div>
+
+          <!-- Real AWS Certificate Frame -->
+          <div class="aws-cinema-frame tilt-card" id="awsCertCard" data-cursor="view">
+            <div class="cert-cyan-mat">
+              <img src="assets/certificates/aws-student-community-day-2026.jpg" alt="AWS Student Community Day 2026 Certificate of Appreciation" class="cert-real-img" id="awsCertImg">
+              <div class="cert-cinema-hover-prompt">
+                <span class="prompt-pill">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg>
+                  <span>EXPAND CERTIFICATE PREVIEW</span>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Complete Certificate Gallery -->
+        <div class="cert-gallery-header reveal">
+          <h3 class="cert-gallery-title">Verified Certificate Dossier</h3>
+          <p class="cert-gallery-desc">All verified certificates are maintained in their original aspect ratios.</p>
+        </div>
+
+        <div class="film-gallery-grid">
+
+          <!-- 01: FUSIONX 2026 -->
+          <div class="film-cert-card reveal tilt-card" data-cert-type="image" data-cert-src="assets/certificates/fusionx-2026-certificate.jpg" data-cert-title="FusionX 2026 — 3rd Prize & Team Leader" data-cert-meta="AWS Student Builder Group &bull; SKPEC (10.9.2026)" data-cursor="view">
+            <div class="film-cert-thumb">
+              <img src="assets/certificates/fusionx-2026-certificate.jpg" alt="FusionX 2026 Certificate" loading="lazy">
+              <span class="thumb-badge thumb-badge--gold">3RD PRIZE</span>
+            </div>
+            <div class="film-cert-body">
+              <span class="cert-shot-num">CREDENTIAL 01</span>
+              <h4>FusionX 2026 &mdash; 3rd Prize</h4>
+              <p>AWS Student Builder Group &bull; SKPEC &bull; 10.9.2026</p>
+              <span class="film-cert-action">Inspect Document &rarr;</span>
+            </div>
+          </div>
+
+          <!-- 02: AWS COMMUNITY DAY 2026 -->
+          <div class="film-cert-card reveal tilt-card" data-cert-type="image" data-cert-src="assets/certificates/aws-student-community-day-2026.jpg" data-cert-title="AWS Student Community Day 2026" data-cert-meta="SKP Engineering College &bull; 31st August 2026" data-cursor="view">
+            <div class="film-cert-thumb">
+              <img src="assets/certificates/aws-student-community-day-2026.jpg" alt="AWS Student Community Day 2026 Certificate" loading="lazy">
+              <span class="thumb-badge thumb-badge--cyan">AWS SBG</span>
+            </div>
+            <div class="film-cert-body">
+              <span class="cert-shot-num">CREDENTIAL 02</span>
+              <h4>AWS Student Community Day</h4>
+              <p>SKP Engineering College &bull; 31st August 2026</p>
+              <span class="film-cert-action">Inspect Document &rarr;</span>
+            </div>
+          </div>
+
+          <!-- 03: NAAN MUDHALVAN CERTIFICATE 01 -->
+          <div class="film-cert-card reveal tilt-card" data-cert-type="pdf" data-cert-src="assets/certificates/NM_Certificate.pdf" data-cert-title="Naan Mudhalvan Certificate 01" data-cert-meta="Upskilling Certification &bull; Anna University" data-cursor="view">
+            <div class="film-cert-thumb film-cert-thumb--pdf">
+              <div class="pdf-stamp">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>OFFICIAL PDF</span>
+              </div>
+              <span class="thumb-badge">VERIFIED</span>
+            </div>
+            <div class="film-cert-body">
+              <span class="cert-shot-num">CREDENTIAL 03</span>
+              <h4>Naan Mudhalvan Certificate 01</h4>
+              <p>Technical Upskilling &bull; Anna University</p>
+              <span class="film-cert-action">Open Document &rarr;</span>
+            </div>
+          </div>
+
+          <!-- 04: NAAN MUDHALVAN CERTIFICATE 02 -->
+          <div class="film-cert-card reveal tilt-card" data-cert-type="pdf" data-cert-src="assets/certificates/NM_Certificate%20(1).pdf" data-cert-title="Naan Mudhalvan Certificate 02" data-cert-meta="Advanced Specialization &bull; Anna University" data-cursor="view">
+            <div class="film-cert-thumb film-cert-thumb--pdf">
+              <div class="pdf-stamp">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>OFFICIAL PDF</span>
+              </div>
+              <span class="thumb-badge">VERIFIED</span>
+            </div>
+            <div class="film-cert-body">
+              <span class="cert-shot-num">CREDENTIAL 04</span>
+              <h4>Naan Mudhalvan Certificate 02</h4>
+              <p>Domain Course Specialization</p>
+              <span class="film-cert-action">Open Document &rarr;</span>
+            </div>
+          </div>
+
+          <!-- 05: INTERNSHIP CERTIFICATE -->
+          <div class="film-cert-card reveal tilt-card" data-cert-type="pdf" data-cert-src="assets/certificates/ROSHAN%20EBINESAR.J%20(1).pdf" data-cert-title="Internship Completion Certificate" data-cert-meta="Full-Stack Student Management System Development" data-cursor="view">
+            <div class="film-cert-thumb film-cert-thumb--pdf">
+              <div class="pdf-stamp">
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                <span>INTERNSHIP PDF</span>
+              </div>
+              <span class="thumb-badge thumb-badge--blue">INTERNSHIP</span>
+            </div>
+            <div class="film-cert-body">
+              <span class="cert-shot-num">CREDENTIAL 05</span>
+              <h4>Internship Completion</h4>
+              <p>Practical Engineering &bull; Roshan Ebinesar J</p>
+              <span class="film-cert-action">Open Document &rarr;</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         SCENE 07: THE DOSSIER (RESUME SCENE)
+         ========================================================= -->
+    <section class="film-scene" id="scene-resume" data-scene="SCENE 07 // DOSSIER">
+      <div class="scene-inner scene-inner--narrow">
+        <div class="film-dossier-panel reveal tilt-card">
+          <div class="dossier-back-glow" aria-hidden="true"></div>
+          
+          <div class="dossier-emblem">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+          </div>
+
+          <div class="scene-tag">// SCENE 07 &bull; OFFICIAL DOCUMENTATION</div>
+          <h2 class="dossier-title">Roshan Ebinesar &mdash; Curriculum Vitae</h2>
+          <p class="dossier-desc">
+            Direct access to the complete verified dossier detailing Computer Science Engineering coursework, full-stack platform implementations, hackathon honors, and technical credentials.
           </p>
 
-          <div class="about__cards">
-            <div class="info-card reveal">
-              <div class="info-card__icon">🎓</div>
-              <h3>CSE Student</h3>
-              <p>Currently studying Computer Science and Engineering.</p>
-            </div>
-            <div class="info-card reveal">
-              <div class="info-card__icon">💻</div>
-              <h3>Full-Stack Developer</h3>
-              <p>Learning and building across the frontend and backend.</p>
-            </div>
-            <div class="info-card reveal">
-              <div class="info-card__icon">🛠️</div>
-              <h3>Project Builder</h3>
-              <p>Prefers learning by shipping real, working projects.</p>
-            </div>
-            <div class="info-card reveal">
-              <div class="info-card__icon">🔐</div>
-              <h3>Cybersecurity Interest</h3>
-              <p>Exploring web and API security concepts alongside development.</p>
-            </div>
+          <div class="dossier-actions">
+            <a href="assets/resume/Roshan_Ebinesar_Resume.pdf" target="_blank" rel="noopener" class="film-btn film-btn--primary" data-cursor="action">
+              <span>VIEW RESUME</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </a>
+            <a href="assets/resume/Roshan_Ebinesar_Resume.pdf" download="Roshan_Ebinesar_Resume.pdf" class="film-btn film-btn--ghost" data-cursor="action">
+              <span>DOWNLOAD RESUME (PDF)</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- ============ SKILLS ============ -->
-    <section class="section section--alt" id="skills">
-      <div class="section__inner">
-        <p class="section__eyebrow reveal">Skills</p>
-        <h2 class="section__title reveal">Technologies I work with</h2>
-
-        <div class="skills__grid">
-
-          <div class="skill-card reveal">
-            <h3 class="skill-card__title">Frontend</h3>
-            <div class="skill-badges">
-              <span class="badge">HTML</span>
-              <span class="badge">CSS</span>
-              <span class="badge">JavaScript</span>
-              <span class="badge badge--learning">React <em>Learning</em></span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <h3 class="skill-card__title">Backend</h3>
-            <div class="skill-badges">
-              <span class="badge badge--learning">Node.js <em>Learning</em></span>
-              <span class="badge badge--learning">Express.js <em>Learning</em></span>
-              <span class="badge badge--learning">REST APIs <em>Learning</em></span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <h3 class="skill-card__title">Database</h3>
-            <div class="skill-badges">
-              <span class="badge badge--learning">MongoDB <em>Learning</em></span>
-              <span class="badge">MySQL</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <h3 class="skill-card__title">Tools</h3>
-            <div class="skill-badges">
-              <span class="badge">Git</span>
-              <span class="badge">GitHub</span>
-              <span class="badge">VS Code</span>
-            </div>
-          </div>
-
-          <div class="skill-card reveal">
-            <h3 class="skill-card__title">Cybersecurity</h3>
-            <div class="skill-badges">
-              <span class="badge badge--learning">Web Security <em>Learning</em></span>
-              <span class="badge badge--learning">API Security <em>Learning</em></span>
-              <span class="badge badge--learning">Vulnerability Awareness <em>Learning</em></span>
-            </div>
-          </div>
-
+    <!-- =========================================================
+         SCENE 08: THE TRANSMISSION (CONTACT SCENE)
+         ========================================================= -->
+    <section class="film-scene film-scene--alt" id="scene-contact" data-scene="SCENE 08 // TRANSMISSION">
+      <div class="scene-inner scene-inner--narrow">
+        <div class="scene-header reveal">
+          <div class="scene-tag">// SCENE 08 &bull; TRANSMISSION</div>
+          <h2 class="scene-title">Let's Build Something Different</h2>
+          <p class="transmission-desc">
+            Open for software engineering opportunities, collaborative builds, and technical discourse.
+          </p>
         </div>
-      </div>
-    </section>
 
-    <!-- ============ PROJECTS ============ -->
-    <section class="section" id="projects">
-      <div class="section__inner">
-        <p class="section__eyebrow reveal">Featured Projects</p>
-        <h2 class="section__title reveal">Things I've built &amp; things I'm building</h2>
-
-        <div class="projects__grid">
-
-          <!-- Project 1: WolfScanX -->
-          <article class="project-card reveal">
-            <div class="project-card__media">
-              <!-- Place a screenshot at assets/projects/wolfscanx.png -->
-              <img src="assets/projects/wolfscanx.png" alt="WolfScanX app concept preview" loading="lazy"
-                   onerror="this.closest('.project-card__media').classList.add('project-card__media--empty')">
-              <span class="project-card__number">01</span>
-            </div>
-            <div class="project-card__body">
-              <h3>WolfScanX</h3>
-              <p>An Android application concept focused on scanning QR codes and checking potentially suspicious or malicious destinations.</p>
-              <div class="project-card__tech">
-                <span class="chip">Android</span>
-                <span class="chip">QR Scanning</span>
-                <span class="chip">Security</span>
-              </div>
-              <div class="project-card__links">
-                <a href="https://github.com/roshan2005-ux" class="btn btn--small" target="_blank" rel="noopener">GitHub</a>
-                <a href="https://github.com/roshan2005-ux" class="btn btn--small btn--outline" target="_blank" rel="noopener">Live Demo</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 2: Full-Stack Web Application (coming soon) -->
-          <article class="project-card project-card--soon reveal">
-            <div class="project-card__media project-card__media--empty">
-              <span class="project-card__number">02</span>
-              <span class="soon-tag">Coming Soon</span>
-            </div>
-            <div class="project-card__body">
-              <h3>Full-Stack Web Application</h3>
-              <p>Coming soon &mdash; a full-stack application demonstrating frontend, backend, API and database integration.</p>
-              <div class="project-card__tech">
-                <span class="chip">TBD</span>
-              </div>
-              <div class="project-card__links">
-                <a href="#" class="btn btn--small btn--disabled" aria-disabled="true">COMING_SOON</a>
-              </div>
-            </div>
-          </article>
-
-          <!-- Project 3: Cybersecurity Project (coming soon) -->
-          <article class="project-card project-card--soon reveal">
-            <div class="project-card__media project-card__media--empty">
-              <span class="project-card__number">03</span>
-              <span class="soon-tag">Coming Soon</span>
-            </div>
-            <div class="project-card__body">
-              <h3>Cybersecurity Project</h3>
-              <p>Coming soon &mdash; a practical cybersecurity project focused on understanding and identifying common web security issues.</p>
-              <div class="project-card__tech">
-                <span class="chip">TBD</span>
-              </div>
-              <div class="project-card__links">
-                <a href="#" class="btn btn--small btn--disabled" aria-disabled="true">COMING_SOON</a>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ LEARNING JOURNEY ============ -->
-    <section class="section section--alt" id="journey">
-      <div class="section__inner">
-        <p class="section__eyebrow reveal">Learning Journey</p>
-        <h2 class="section__title reveal">How I got here</h2>
-
-        <div class="timeline">
-          <div class="timeline__item reveal">
-            <div class="timeline__year">2024</div>
-            <div class="timeline__content">
-              <p>Started building foundations in Computer Science and programming.</p>
-            </div>
-          </div>
-          <div class="timeline__item reveal">
-            <div class="timeline__year">2025</div>
-            <div class="timeline__content">
-              <p>Explored web development, programming, Git/GitHub and cybersecurity concepts.</p>
-            </div>
-          </div>
-          <div class="timeline__item reveal">
-            <div class="timeline__year">2026</div>
-            <div class="timeline__content">
-              <p>Focused on full-stack development, project building and improving practical development skills.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ EDUCATION ============ -->
-    <section class="section" id="education">
-      <div class="section__inner">
-        <p class="section__eyebrow reveal">Education</p>
-        <h2 class="section__title reveal">Academic background</h2>
-
-        <div class="education-card reveal">
-          <div class="education-card__icon">🎓</div>
-          <div>
-            <h3>Computer Science and Engineering</h3>
-            <p class="education-card__meta">Anna University</p>
-            <p class="education-card__status">Currently pursuing 3rd Year</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CERTIFICATIONS ============ -->
-    <section class="section section--alt" id="certifications">
-      <div class="section__inner">
-        <p class="section__eyebrow reveal">Certifications</p>
-        <h2 class="section__title reveal">Courses & certificates</h2>
-
-        <div class="cert__grid">
-          <a href="assets/certificates/NM_Certificate.pdf" class="cert-card reveal" target="_blank" rel="noopener">
-            <span class="cert-card__number">Certificate 01</span>
-            <span class="cert-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            </span>
-            <span class="cert-card__name">NM</span>
-            <span class="cert-card__meta">Platform &bull; Year</span>
-            <span class="cert-card__btn">View Certificate</span>
+        <div class="transmission-channels reveal">
+          <a href="mailto:roshanebi005@gmail.com" class="film-btn film-btn--primary" data-cursor="action">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M1.5 4.5h21a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-21a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1Zm.9 2 9.6 7.1 9.6-7.1H2.4Zm19.6 1.9-8.7 6.4a1.5 1.5 0 0 1-1.8 0L2.8 8.4v10.6h19.2V8.4Z"/></svg>
+            <span>roshanebi005@gmail.com</span>
           </a>
-          <a href="assets/certificates/NM_Certificate%20(1).pdf" class="cert-card reveal" target="_blank" rel="noopener">
-            <span class="cert-card__number">Certificate 02</span>
-            <span class="cert-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            </span>
-            <span class="cert-card__name">NM</span>
-            <span class="cert-card__meta">Platform &bull; Year</span>
-            <span class="cert-card__btn">View Certificate</span>
+          <a href="https://github.com/roshan2005-ux" target="_blank" rel="noopener" class="film-btn film-btn--ghost" data-cursor="link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+            <span>GitHub Profile</span>
           </a>
-          <a href="assets/certificates/ROSHAN%20EBINESAR.J%20(1).pdf" class="cert-card reveal" target="_blank" rel="noopener">
-            <span class="cert-card__number">Certificate 03</span>
-            <span class="cert-card__icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-            </span>
-            <span class="cert-card__name">Internship</span>
-            <span class="cert-card__meta">Platform &bull; Year</span>
-            <span class="cert-card__btn">View Certificate</span>
+          <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" target="_blank" rel="noopener" class="film-btn film-btn--ghost" data-cursor="link">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
+            <span>LinkedIn Profile</span>
           </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ GITHUB / LINKEDIN ============ -->
-    <section class="section" id="social">
-      <div class="section__inner">
-        <p class="section__eyebrow reveal">Find Me Online</p>
-        <h2 class="section__title reveal">GitHub &amp; LinkedIn</h2>
-
-        <div class="social__grid">
-          <a href="https://github.com/roshan2005-ux" class="social-card reveal" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
-            <div>
-              <h3>GitHub</h3>
-              <p>github.com/roshan2005-ux</p>
-            </div>
-          </a>
-          <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" class="social-card reveal" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" width="28" height="28" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
-            <div>
-              <h3>LinkedIn</h3>
-              <p>linkedin.com/in/roshan-ebinesar-235321338</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ CONTACT ============ -->
-    <section class="section section--alt" id="contact">
-      <div class="section__inner section__inner--narrow">
-        <p class="section__eyebrow reveal">Contact</p>
-        <h2 class="section__title reveal">Let's Build Something</h2>
-        <p class="contact__desc reveal">
-          Have a project idea, collaboration opportunity, or just want to connect?
-          Feel free to reach out.
-        </p>
-
-        <div class="contact__actions reveal">
-          <a href="mailto:roshanebi005@gmail.com" class="btn btn--primary">Email Me</a>
-          <a href="https://github.com/roshan2005-ux" class="btn btn--ghost" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" class="btn btn--ghost" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- ============ FOOTER ============ -->
-  <footer class="footer">
-    <div class="footer__inner">
-      <div>
-        <p class="footer__name">Roshan Ebinesar</p>
-        <p class="footer__role">Full-Stack Developer</p>
+  <!-- ============ FILM CREDITS FOOTER ============ -->
+  <footer class="film-footer">
+    <div class="film-footer__inner">
+      <div class="film-footer__credit">
+        <a href="#scene-intro" class="film-footer__brand" aria-label="Roshan Ebinesar Home" data-cursor="link">
+          <img src="assets/profile/roshan-logo.svg" alt="Roshan Monogram R" class="footer-brand-icon">
+          <div class="footer-brand-text">
+            <p class="film-footer__title">ROSHAN EBINESAR</p>
+            <p class="film-footer__role">Full-Stack Developer &bull; CSE Student</p>
+          </div>
+        </a>
       </div>
 
-      <div class="footer__socials">
-        <a href="https://github.com/roshan2005-ux" class="social-icon" aria-label="GitHub" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
+      <div class="film-footer__meta">
+        <span>PRODUCED IN 2026</span>
+        <span>&bull;</span>
+        <span>CINEMATIC DIGITAL REEL</span>
+      </div>
+
+      <div class="film-footer__socials">
+        <a href="https://github.com/roshan2005-ux" class="film-social-icon" aria-label="GitHub" target="_blank" rel="noopener" data-cursor="link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M12 .5C5.7.5.7 5.6.7 12c0 5.1 3.3 9.4 7.9 11 .6.1.8-.3.8-.6v-2.2c-3.2.7-3.9-1.5-3.9-1.5-.5-1.3-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.7 1.3 3.4 1 .1-.8.4-1.3.8-1.6-2.6-.3-5.3-1.3-5.3-5.7 0-1.3.5-2.3 1.2-3.1-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2A11 11 0 0 1 12 5.8c1 0 2 .1 3 .4 2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.8.1 3.1.8.8 1.2 1.9 1.2 3.1 0 4.4-2.7 5.4-5.3 5.7.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6 4.6-1.6 7.9-5.9 7.9-11C23.3 5.6 18.3.5 12 .5Z"/></svg>
         </a>
-        <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" class="social-icon" aria-label="LinkedIn" target="_blank" rel="noopener">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
+        <a href="https://www.linkedin.com/in/roshan-ebinesar-235321338" class="film-social-icon" aria-label="LinkedIn" target="_blank" rel="noopener" data-cursor="link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM.5 8.75h8.9V23.5H.5V8.75Zm14.9-.25c-2.9 0-4.3 1.6-5 2.7v-2.45h-8.9V23.5h8.9v-8.1c0-2.15 1.6-2.7 2.6-2.7s2.5.6 2.5 2.65v8.15H24V14.2c0-6.1-4.6-5.7-8.6-5.7Z"/></svg>
         </a>
-        <a href="mailto:roshanebi005@gmail.com" class="social-icon" aria-label="Email">
-          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M1.5 4.5h21a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-21a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1Zm.9 2 9.6 7.1 9.6-7.1H2.4Zm19.6 1.9-8.7 6.4a1.5 1.5 0 0 1-1.8 0L2.8 8.4v10.6h19.2V8.4Z"/></svg>
+        <a href="mailto:roshanebi005@gmail.com" class="film-social-icon" aria-label="Email" data-cursor="link">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M1.5 4.5h21a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-21a1 1 0 0 1-1-1v-13a1 1 0 0 1 1-1Zm.9 2 9.6 7.1 9.6-7.1H2.4Zm19.6 1.9-8.7 6.4a1.5 1.5 0 0 1-1.8 0L2.8 8.4v10.6h19.2V8.4Z"/></svg>
         </a>
       </div>
     </div>
-    <p class="footer__copy">&copy; 2026 Roshan Ebinesar. All rights reserved.</p>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">&uarr;</button>
+  <!-- ============ ACCESSIBLE FILM MODAL ============ -->
+  <dialog class="film-modal" id="previewModal" aria-labelledby="modalTitle">
+    <div class="film-modal__inner">
+      <div class="film-modal__header">
+        <div>
+          <h3 class="film-modal__title" id="modalTitle">Certificate Dossier</h3>
+          <p class="film-modal__meta" id="modalMeta"></p>
+        </div>
+        <div class="film-modal__controls">
+          <a href="#" id="modalOpenExternal" target="_blank" rel="noopener" class="film-btn film-btn--small film-btn--ghost">
+            <span>Open in Tab ↗</span>
+          </a>
+          <button class="film-modal__close-btn" id="closeModal" aria-label="Close modal">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <div class="film-modal__body" id="modalBody">
+        <!-- Injected Image or PDF iframe -->
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ============ BACK TO TOP BUTTON ============ -->
+  <button class="film-top-cue" id="backToTop" aria-label="Return to scene 01" data-cursor="action">&uarr;</button>
 
   <script src="script.js"></script>
 </body>

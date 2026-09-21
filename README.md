@@ -1,168 +1,75 @@
-# Roshan Ebinesar — Developer Portfolio
+# Roshan Ebinesar — Cinematic Developer Portfolio
 
-A modern, premium, dark-themed personal portfolio built with plain HTML, CSS and
-JavaScript — no frameworks, no build step. Made to be easy to open in VS Code,
-edit, and deploy.
+A premium, cinematic, and immersive developer portfolio for **Roshan Ebinesar**, Computer Science Engineering student and Full-Stack Developer. Inspired by high-end technology films and 3D interactive reels.
 
-## About
+---
 
-This site introduces Roshan Ebinesar, a Computer Science Engineering student
-and Full-Stack Developer, with an additional interest in cybersecurity. It's
-built to be realistic and honest: real skills are labeled clearly, in-progress
-skills are marked **Learning**, and unfinished projects are marked
-**Coming Soon** rather than faked.
+## Key Highlights & Real Verified Assets
 
-## Features
+- **Cinematic Character Visual**: Real professional suit portrait (`assets/profile/roshan-portrait.jpg`) featured in the fullscreen cinematic intro and hero section with atmospheric lighting and 3D depth.
+- **FusionX 2026 Hackathon (3rd Prize & Team Leader)**: Real certificate (`assets/certificates/fusionx-2026-certificate.jpg`) from the 24-hour hackathon conducted by the AWS Student Builder Group at SKP Engineering College (10.9.2026).
+- **AWS Student Community Day 2026**: Real certificate of appreciation (`assets/certificates/aws-student-community-day-2026.jpg`) held on 31st August 2026 at SKP Engineering College, Tiruvannamalai.
+- **Placement Launchpad AI**: Featured major project showcase linked directly to GitHub repository: [https://github.com/roshan2005-ux/Placement-launchpad-ai](https://github.com/roshan2005-ux/Placement-launchpad-ai).
+- **WolfScanX**: Android QR-code scanner and cybersecurity project preview (`assets/projects/wolfscanx.png`).
+- **Student Management System & Naan Mudhalvan Certifications**: Complete verified certificates preserved and accessible through the interactive modal viewer.
+- **Verified Official Resume**: Accessible directly via View / Download PDF at `assets/resume/Roshan_Ebinesar_Resume.pdf`.
 
-- Sticky glass-effect navbar with active-section highlighting and a mobile menu
-- Animated hero section with a typing-effect terminal card and floating tech badges
-- About, Skills, Projects, Learning Journey (timeline), Education, and
-  Certifications sections
-- Certificate lightbox/modal with keyboard (Esc) support
-- Scroll-reveal animations, respecting `prefers-reduced-motion`
-- Fully responsive from 320px up to large desktops
-- No external JS frameworks or CSS libraries — just semantic HTML, modern CSS
-  (variables, Flexbox, Grid), and vanilla JavaScript
-- Google Fonts (Inter + JetBrains Mono) loaded via `<link>` — the only external
-  dependency, used purely for typography
+---
 
-## Technologies
+## Architectural & Cinematic Features
 
-- HTML5 (semantic markup)
-- CSS3 (custom properties, Grid, Flexbox, media queries)
-- Vanilla JavaScript (IntersectionObserver for reveals/typing/active-nav)
+1. **Fullscreen Cinematic Opening**:
+   - Black screen sequence with ambient particle emergence, atmospheric volumetric lighting, portrait illumination, rim-light glow, and typography reveal.
+   - Includes seamless transition to hero and an instant `[ESC] / [ENTER]` bypass.
+2. **60 FPS Canvas Nebula & Particle Field**:
+   - Lightweight, battery-efficient particle constellation with mouse deflection and auto-pause when out of view.
+3. **Floating HUD Glass Panels**:
+   - 3D glassmorphic interface panels floating around the portrait with depth parallax.
+4. **Interactive 3D Tilt**:
+   - Real-time perspective transforms on hover for cards and certificates.
+5. **Accessible Lightbox Modal**:
+   - Native `<dialog>` element supporting both high-resolution certificates and PDF previews with light-dismiss (click outside) and keyboard `[ESC]` support.
+6. **Desktop Cinematic Cursor**:
+   - Reactive cursor with contextual action labels (`VIEW`, `OPEN`, `LINK`), automatically disabled on touch devices.
+7. **Accessibility & Performance**:
+   - Full support for `prefers-reduced-motion: reduce`.
+   - Semantic HTML5, ARIA labels, responsive down to 320px mobile screens.
+
+---
 
 ## Folder Structure
 
 ```
 roshan-portfolio/
-├── index.html
-├── style.css
-├── script.js
-├── README.md
-│
+├── index.html          → Semantic structure, cinematic intro, hero, showcases, modal
+├── style.css           → Dark cinematic design system, glassmorphism, 3D tilt, responsive queries
+├── script.js           → Canvas engine, intro controller, parallax, cursor, modal logic
+├── README.md           → Project documentation
 └── assets/
-    ├── profile/        → profile photo, favicon
-    ├── projects/        → project screenshots (e.g. wolfscanx.png)
-    ├── certificates/     → certificate images (e.g. certificate-01.jpg)
-    └── resume/          → Roshan_Ebinesar_Resume.pdf
+    ├── profile/
+    │   ├── roshan-portrait.jpg   → Real suit portrait (hero centerpiece & intro)
+    │   ├── roshan.jpeg          → Profile image
+    │   └── favicon.png          → Site favicon
+    ├── certificates/
+    │   ├── fusionx-2026-certificate.jpg        → Real 24h Hackathon 3rd Prize certificate
+    │   ├── aws-student-community-day-2026.jpg  → Real AWS Community Day certificate
+    │   ├── NM_Certificate.pdf                  → Naan Mudhalvan Certificate 01
+    │   ├── NM_Certificate (1).pdf              → Naan Mudhalvan Certificate 02
+    │   └── ROSHAN EBINESAR.J (1).pdf           → Internship Certificate
+    ├── projects/
+    │   └── wolfscanx.png                       → WolfScanX app concept preview
+    └── resume/
+        └── Roshan_Ebinesar_Resume.pdf          → Official verified resume
 ```
 
-Each `assets/` subfolder contains a `README_PLACEHOLDER.txt` explaining
-exactly what to drop in there.
+---
 
 ## How to Run Locally
 
-No build tools required.
-
-1. Download or clone the project folder.
-2. Open `index.html` directly in a browser, **or** for the best experience
-   (so relative paths behave exactly like on a real server), serve it locally:
-   ```bash
-   # from inside the roshan-portfolio folder
-   python3 -m http.server 5500
-   ```
-   Then visit `http://localhost:5500` in your browser.
-
-## How to Customize
-
-### Profile photo
-Add an image to `assets/profile/` and reference it in `index.html` wherever
-you'd like to add a photo (e.g. inside `.hero__content` or `.about__grid`).
-
-### Projects
-Edit the three `.project-card` blocks inside the `#projects` section in
-`index.html`:
-- Replace `YOUR_WOLFSCANX_GITHUB_LINK` and `YOUR_WOLFSCANX_LIVE_LINK` with
-  real URLs once available.
-- Add a screenshot at `assets/projects/wolfscanx.png` (the card already
-  points to this path).
-- Replace the two `COMING_SOON` project cards with real content once those
-  projects are ready — update the heading, description, `chip` tech tags,
-  and links.
-
-### Certificates
-1. Add certificate images to `assets/certificates/` (e.g. `certificate-01.jpg`).
-2. In `index.html`, update each `.cert-card` button's:
-   - `data-cert` → path to the image
-   - `data-title` → certificate name
-   - `data-meta` → platform & year
-   - Visible text inside the button (certificate name, platform, year)
-
-### Resume
-Place your PDF at `assets/resume/Roshan_Ebinesar_Resume.pdf`. The
-**Download Resume** button in the hero section already links to this exact
-path — no code changes needed once the file is in place.
-
-### Social links
-Search `index.html` for these placeholders and replace them everywhere
-they appear (hero, GitHub/LinkedIn cards, contact section, footer):
-- `YOUR_GITHUB_URL`
-- `YOUR_LINKEDIN_URL`
-- `YOUR_EMAIL`
-
-### Colors & fonts
-All colors live as CSS variables at the top of `style.css` under `:root`
-(`--bg`, `--accent`, etc.) — change them there and the whole site updates.
-
-## What You Need To Change
-
-Before publishing, replace every placeholder below:
-
-- [ ] `YOUR_GITHUB_URL` (hero, GitHub/LinkedIn cards, contact, footer)
-- [ ] `YOUR_LINKEDIN_URL` (hero, GitHub/LinkedIn cards, contact, footer)
-- [ ] `YOUR_EMAIL` (hero, contact, footer)
-- [ ] `assets/resume/Roshan_Ebinesar_Resume.pdf` (add the real file)
-- [ ] Profile photo (optional — add to `assets/profile/`)
-- [ ] `assets/projects/wolfscanx.png` (WolfScanX screenshot)
-- [ ] `YOUR_WOLFSCANX_GITHUB_LINK`
-- [ ] `YOUR_WOLFSCANX_LIVE_LINK`
-- [ ] Certificate names, platforms, years, and images (3 placeholders)
-- [ ] Exact college name / year, if it differs from what's shown in the
-      Education section
-- [ ] Favicon at `assets/profile/favicon.png`
-
-## Deployment
-
-### GitHub
+No build tools or heavy node modules needed:
 
 ```bash
-# From inside the roshan-portfolio folder
-git init
-git add .
-git commit -m "Initial commit: Roshan Ebinesar portfolio"
-git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/roshan-portfolio.git
-git push -u origin main
+# Serve with Python locally
+python -m http.server 5500
 ```
-
-Then verify the repository by visiting `https://github.com/YOUR_USERNAME/roshan-portfolio`
-and confirming all files (including `assets/`) uploaded correctly.
-
-### GitHub Pages
-
-1. On GitHub, open your `roshan-portfolio` repository.
-2. Go to **Settings → Pages**.
-3. Under **Build and deployment → Source**, choose **Deploy from a branch**.
-4. Under **Branch**, select `main` and folder `/ (root)`, then click **Save**.
-5. Wait a minute, then refresh the page — GitHub will show your live URL
-   (usually `https://YOUR_USERNAME.github.io/roshan-portfolio/`).
-
-### Vercel
-
-1. Go to [vercel.com](https://vercel.com) and log in (or create an account)
-   using your GitHub account.
-2. Click **Add New… → Project**.
-3. Select **Import** next to your `roshan-portfolio` GitHub repository.
-4. Leave the default settings (no framework preset needed — this is a static
-   site) and click **Deploy**.
-5. Once deployment finishes, Vercel shows your live URL.
-6. To redeploy: every time you `git push` new commits to `main`, Vercel
-   automatically rebuilds and redeploys the live site — no extra steps needed.
-
-## Notes
-
-This portfolio intentionally avoids inflated claims (no fake years of
-experience, fake companies, or fake statistics). Skills that are still in
-progress are labeled **Learning**, and unfinished projects are labeled
-**Coming Soon** — update both honestly as your experience grows.
+Then visit `http://localhost:5500` in your browser.
